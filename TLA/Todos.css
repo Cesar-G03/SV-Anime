@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar{    
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    -webkit-boxshadow: inset 0 0 30px rgb(235, 166, 37);
+}
+::-webkit-scrollbar-thumb{
+    border: 1px solid;
+    border-color: black;
+    border-radius: 5px;
+    background-color: rgb(202, 144, 216);
+    
+}
+::-webkit-scrollbar-thumb:hover{ 
+    background-color: #70163c;
+}
+
+body {
+    font-family: 'open sans';
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #642a73;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+/* --Nav-- Botones de navegación*/
+
+nav{
+    background: url(../IC/Banner.jpg);
+    text-align: center;
+    padding: 25px 0px 25px 0px; /* abajo  izquierda  arriba  derecha*/
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+.menu > li{
+	position: relative;
+	display: inline-block;
+}
+
+.default{
+    cursor:default;
+}
+
+.menu > li > a{
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+	display: block;
+	padding: 10px;
+    border: 1px solid;    
+    border-radius: 20px;
+    background-color: #eea551;
+	
+}
+
+.menu li a:hover{
+	background-color: #e77f08;
+	transition: all .3s;
+}
+
+/* Submenu*/
+
+.submenu{
+	position: absolute;
+	width: 93%;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 1s;
+    list-style: none;
+}
+
+.submenu li a{
+	display: block;
+	padding: 15px;
+	color: #fff;
+	font-family: 'Open sans';
+	text-decoration: none;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: #eea551;
+}
+
+.menu li:hover .submenu{
+	visibility: visible;
+	opacity: 1;
+}
+
+
+
+
+/*Lo mejor de lo mejor*/
+
+header {
+    width: 100%;
+    height: 350px;
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(Imagenes/Raton.jpg)/*Imagen*/;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(Imagenes/Raton.jpg)/*Imagen*/;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative; 
+}
+
+.icon{
+    padding: 15px 0px 0px 15px;
+    transition: all .3s ease-in-out;
+    background: rgba(255, 255, 255, 0);    
+}
+
+.icon:hover{ 
+    transform: rotate(360deg);
+}
+
+header .textos-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1{
+    padding-top: 15px;
+    font-size: 50px;
+    color:#fff;
+}
+
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;}
+
+
+
+.contenido-textos p{
+    text-align: center;
+    padding: 100px 0px 0px 0px;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+
+
+/*Lo mejor de...*/
+
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card1{ 
+    background: #4A235A;
+    margin-left: 10px;
+    display: flex;
+    width: 700px;
+    height: 400px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    box-shadow: 0 0 6px 0 rgb(97, 116, 224);
+}
+.cards .card2{ 
+    background: #94356f;
+    margin-left: 10px;
+    display: flex;
+    width: 700px;
+    height: 400px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    box-shadow: 0 0 6px 0 rgb(97, 116, 224);
+}
+.cards .card3{ 
+    background: #a88c2d;
+    margin-left: 10px;
+    display: flex;
+    width: 700px;
+    height: 400px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    box-shadow: 0 0 6px 0 rgb(97, 116, 224);
+}
+.cards .card4{ 
+    background: #641E16;
+    margin-left: 10px;
+    display: flex;
+    width: 700px;
+    height: 400px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    box-shadow: 0 0 6px 0 rgb(97, 116, 224);
+}
+
+.cards .card1 img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin-right: 10PX;
+    margin-left: 10PX;
+}
+.cards .card2 img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin-right: 10PX;
+    margin-left: 10PX;
+}
+.cards .card3 img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin-right: 10PX;
+    margin-left: 10PX;
+}
+.cards .card4 img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin-right: 10PX;
+    margin-left: 10PX;
+}
+.card1 h4{
+    color: chartreuse;
+}
+.card1 p{
+    color: rgb(255, 255, 255);
+}
+.card2 h4{
+    color: rgb(53, 233, 224);
+}
+.card2 p{
+    color: rgb(255, 255, 255);
+}
+.card3 h4{
+    color: rgb(81, 2, 133);
+}
+.card3 p{
+    color: rgb(255, 255, 255);
+}
+.card4 h4{
+    color: gold;
+}
+.card4 p{
+    color: rgb(255, 255, 254);
+}
+
+.zoom{
+    transition: transform .2s; 
+} 
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: rgb(255, 255, 255);
+}
+
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/* Lo mejor del mes */
+
+.portafolio{
+    background: #f2f2f2;
+}
+
+.galeria{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+}
+
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(273,91%,27%, 0.7);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hover-galeria img{
+    width: 100%;
+}
+
+.hover-galeria p{
+    color: #fff;
+}
+
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+
+/* Footer */
+
+footer{
+    background: #414141;
+    padding: 60px 0 30px 0;    
+    overflow: hidden;
+}
+
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+
+    .icon{
+        width: 10%;
+    }
+
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+
+    .imagen-about-us{
+        width: 90%;
+    }
+
+    .imagen-port{
+        width: 44%;
+    }
+
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card{
+        width: 90%;
+    }
+
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a{
+        margin-right: 5px;
+    }
+
+    .menu{
+        padding: 0px 0px 30px 0px;
+    }
+
+    .icon{
+        width:10%;
+    }
+
+    .textos-header h1{
+        font-size: 35px;
+    }
+
+    .textos-header h2{
+        font-size: 20px;
+    }
+
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+
+    .imagen-port{
+        width: 95%;
+    }
+
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+
+    .titulo-final{
+        font-size: 20px;
+    }
+}
